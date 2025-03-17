@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelby Logistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function checkCredentials() {
+            var username = prompt("Bitte Benutzernamen eingeben:");
+            var password = prompt("Bitte Passwort eingeben:");
+            
+            if (username !== "admin" || password !== "shelby123") {
+                alert("Falscher Benutzername oder falsches Passwort!");
+                window.location.href = "#home";
+            }
+        }
+    </script>
+    <style>
+        .no-select {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-blue-600 text-white p-4 text-center text-xl font-bold">
+        Shelby Logistics OneV RP
+    </header>
+    
+    <nav class="bg-blue-500 p-3 text-center">
+        <a href="#home" class="text-white px-4">Home</a>
+        <a href="#about" class="text-white px-4">Über Uns</a>
+        <a href="#order" class="text-white px-4">Bestellung</a>
+        <a href="#catalog" class="text-white px-4">Katalog</a>
+        <a href="#internal" class="text-white px-4" onclick="checkCredentials()">Interner Bereich</a>
+        <a href="#contact" class="text-white px-4">Kontakt</a>
+    </nav>
+    
+    <section id="home" class="p-6 text-center">
+        <h2 class="text-3xl font-bold">Willkommen bei Shelby Logistics</h2>
+        <p class="mt-2">Ihr zuverlässiger Partner für Logistik und Transport in Los Santos.</p>
+    </section>
+    
+    <footer class="bg-blue-600 text-white text-center p-4 mt-6 no-select">
+        &copy; 2025 Benjamin Hirner - Alle Rechte vorbehalten.
+    </footer>
+</body>
+</html>
